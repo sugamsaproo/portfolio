@@ -28,11 +28,8 @@ export default function HeroIntro() {
       >
         {/* Large circular profile above heading */}
         <div className="hero-avatar-wrapper">
-          <img
-            src="/assets/profile.jpg"
-            alt="Sugam Saproo"
-            className="hero-avatar"
-          />
+<img src={`${process.env.PUBLIC_URL}/assets/profile.jpg`} alt="Sugam Saproo" className="hero-avatar" />
+
         </div>
 
         <h1 className="hero-title">

@@ -6,16 +6,15 @@ export default function ContactSection() {
     window.location.href = "mailto:sugamsaproo97@gmail.com";
   };
 
-  const handleResumeDownload = () => {
-    // For React, anything inside public/ is served from root:
-    // public/assets/Shivam-Sapru-FlowCV-Resume-20250721.pdf
-    const link = document.createElement("a");
-    link.href = "/assets/Shivam-Sapru-FlowCV-Resume-20250721.pdf";
-    link.download = "Shivam-Sapru-Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+const handleResumeDownload = () => {
+  const link = document.createElement('a');
+  link.href = `${process.env.PUBLIC_URL}/assets/Shivam-Sapru-FlowCV-Resume-20250721.pdf`;
+  link.download = 'Sugam-Saproo-Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   return (
     <section className="contact-section">
